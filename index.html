@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ken's web</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        img{
+            float:left;
+            border-width: 0.8cm;
+            border-style: solid;
+            border-color: rgb(255, 255, 255);
+        }
+        a{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Yu-Chen Hsu (徐御宸)</h1>
+    <img src="me.jpg" height="400" >
+    <h1>about me</h1>
+    <h2>biography</h2>
+    <p>I graduated from <a href="https://www2.ck.tp.edu.tw/" target="_blank">CKHC(建國中學)</a>,</p>
+    <p>study in NTU now and major in <a href="https://web.ee.ntu.edu.tw/" target="_blank">Electrical Engineering</a>.</p>
+    <h2>hobby</h2>
+    <p>1.玩各種遊戲:包含手機遊戲、桌遊、卡牌遊戲(<a href="https://asia.pokemon-card.com/tw/" target="_blank">PTCG</a>)</p>
+    <p>2.看書:喜歡看科普類的書籍，常常透過<a href="https://www.books.com.tw/" target="_blank">博客來</a>訂書(這不是工商)</p>
+    <p>3.看棒球比賽:最近很常看中職，支持的球隊是<a href="https://www.brothers.tw/" target="_blank">中信兄弟</a></p>
+    <p>Date/Time: <span id="datetime"></span></p>
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"-"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"-"+ (dt.getFullYear()) +" "+ 
+            (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+        var int=self.setInterval("clock()",1000);
+        function clock(){
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"-"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"-"+ (dt.getFullYear()) +" "+ 
+            (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+        }
+    </script>
+    <audio controls autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+  </body>
+</html>
